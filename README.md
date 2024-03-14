@@ -4,6 +4,7 @@ For the ETL mini project, we collaborated to build an ETL pipeline using Python,
 
 
 Within Resources Folder:
+
 campaign.csv
 category.csv
 contacts.csv
@@ -11,7 +12,8 @@ contacts.xlsx
 crowdfunding.xlsx
 subcategory.csv
 
-Instructions
+Instructions: 
+
 The instructions for this mini project are divided into the following subsections:
 
 Create the Category and Subcategory DataFrames
