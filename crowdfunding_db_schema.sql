@@ -1,31 +1,25 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
-
-CREATE TABLE "Contacts" (
-    "contact_id" INT   NOT NULL,
-    "first_name" VARCHAR(50)   NOT NULL,
-    "last_name" VARCHAR(50)   NOT NULL,
-    "email" VARCHAR(100)   NOT NULL,
-    CONSTRAINT "pk_Contacts" PRIMARY KEY (
-        "contact_id"
-     )
+CREATE TABLE Contacts
+(
+    contact_id integer NOT NULL,
+    first_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    last_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "pk_Contacts" PRIMARY KEY (contact_id)
 );
 
-CREATE TABLE "Category" (
-    "category_id" VARCHAR(50)   NOT NULL,
-    "category_name" VARCHAR(255)   NOT NULL,
-    CONSTRAINT "pk_Category" PRIMARY KEY (
-        "category_id"
-     )
-);
 
-CREATE TABLE "Subcategory" (
-    "subcategory_id" VARCHAR(50)   NOT NULL,
-    "subcategory_name" VARCHAR(255)   NOT NULL,
-    CONSTRAINT "pk_Subcategory" PRIMARY KEY (
-        "subcategory_id"
-     )
+CREATE TABLE Category
+(
+    category_id character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    category_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "pk_Category" PRIMARY KEY (category_id)
+)
+
+CREATE TABLE Subcategory
+(
+    subcategory_id character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    subcategory_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "pk_Subcategory" PRIMARY KEY (subcategory_id)
 );
 
 CREATE TABLE "Campaign" (
@@ -39,8 +33,8 @@ CREATE TABLE "Campaign" (
     "backers_count" INT   NOT NULL,
     "country" VARCHAR(100)   NOT NULL,
     "currency" VARCHAR(50)   NOT NULL,
-    "launched_date" DATETIME   NOT NULL,
-    "end_date" DATETIME   NOT NULL,
+    "launched_date" DATE  NOT NULL,
+    "end_date" DATE   NOT NULL,
     "category_id" VARCHAR(50)   NOT NULL,
     "subcategory_id" VARCHAR(50)   NOT NULL,
     CONSTRAINT "pk_Campaign" PRIMARY KEY (
