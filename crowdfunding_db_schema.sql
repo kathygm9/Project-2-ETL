@@ -13,7 +13,7 @@ CREATE TABLE Category
     category_id character varying(50) COLLATE pg_catalog."default" NOT NULL,
     category_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT "pk_Category" PRIMARY KEY (category_id)
-)
+);
 
 CREATE TABLE Subcategory
 (
